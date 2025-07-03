@@ -33,7 +33,6 @@ MANIFEST
 *.spec
 
 # Installer logs
-.artifacts
 pip-log.txt
 pip-delete-this-directory.txt
 
@@ -136,6 +135,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
+.artifacts/
 .env
 .envrc
 .venv
