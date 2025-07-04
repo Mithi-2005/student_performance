@@ -139,7 +139,7 @@ celerybeat.pid
 .envrc
 .venv
 artifacts/
-catboost_info/
+notebook/catboost_info/
 env/
 venv/
 ENV/
