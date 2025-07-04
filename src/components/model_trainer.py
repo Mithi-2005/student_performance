@@ -36,7 +36,7 @@ class ModelTrainer:
                 "Linear Regression":LinearRegression(),
                 "Ridge":Ridge(),
                 "Lasso":Lasso(),
-                "Catboost":CatBoostRegressor()
+                "Catboost": CatBoostRegressor()
             }
             
             model_report,trained_models=evaluate_model(x_train,y_train,x_test,y_test,models)
