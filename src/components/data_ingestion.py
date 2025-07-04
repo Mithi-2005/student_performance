@@ -6,6 +6,7 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from dataclasses import dataclass
 from src.components.data_transformation import DataTranformation,DataTransformationConfig
+from src.components.model_trainer import ModelTrainerConfig,ModelTrainer
 
 @dataclass ### This decorator used to declare variables without constructor in python
 class DataIngestionConfig:
@@ -46,4 +47,6 @@ if __name__=="__main__":
     train_data,test_data=obj.initiate_data_ingestion()
     
     data_tranformation=DataTranformation()
-    data_tranformation.initiate_data_transformation(train_path=train_data,test_path=test_data)
+    train_arr,test_arr,_=data_tranformation.initiate_data_transformation(train_path=train_data,test_path=test_data)
+    model_trainer=ModelTrainer()
+    print(model_trainer.initiate_training(train_arr=train_arr,test_arr=test_arr))
